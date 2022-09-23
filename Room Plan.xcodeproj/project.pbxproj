@@ -56,15 +56,39 @@
 		23A65DDD28DE4F06002D58B0 /* Room Plan */ = {
 			isa = PBXGroup;
 			children = (
+				23A65DF228DE4F1C002D58B0 /* Application */,
+				23A65DF428DE4FCD002D58B0 /* Main */,
+				23A65DF328DE4F27002D58B0 /* Resources */,
+			);
+			path = "Room Plan";
+			sourceTree = "<group>";
+		};
+		23A65DF228DE4F1C002D58B0 /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				23A65DDE28DE4F06002D58B0 /* AppDelegate.swift */,
 				23A65DE028DE4F06002D58B0 /* SceneDelegate.swift */,
-				23A65DE228DE4F06002D58B0 /* ViewController.swift */,
-				23A65DE428DE4F06002D58B0 /* Main.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		23A65DF328DE4F27002D58B0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				23A65DE728DE4F07002D58B0 /* Assets.xcassets */,
 				23A65DE928DE4F07002D58B0 /* LaunchScreen.storyboard */,
 				23A65DEC28DE4F07002D58B0 /* Info.plist */,
 			);
-			path = "Room Plan";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		23A65DF428DE4FCD002D58B0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				23A65DE228DE4F06002D58B0 /* ViewController.swift */,
+				23A65DE428DE4F06002D58B0 /* Main.storyboard */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,12 +313,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S256F93A4R;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Room Plan/Info.plist";
+				INFOPLIST_FILE = "Room Plan/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,12 +341,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S256F93A4R;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Room Plan/Info.plist";
+				INFOPLIST_FILE = "Room Plan/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
