@@ -10,19 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
     // MARK: - IBOutlets
-    @IBOutlet private var exportButton: UIButton?
-    @IBOutlet private var doneButton: UIBarButtonItem?
-    @IBOutlet private var cancelButton: UIBarButtonItem?
+    @IBOutlet private var rightBarButton: UIBarButtonItem!
+    @IBOutlet private var cancelButton: UIBarButtonItem!
 
     // MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupRoomCaptureView()
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        startSession()
+        styleForDefaultMode()
     }
 
     override func viewWillDisappear(_ flag: Bool) {
@@ -31,29 +26,18 @@ class ViewController: UIViewController {
     }
 
     // MARK: - IBActions
-    @IBAction func doneScanning(_ sender: UIBarButtonItem) {
-        if isScanning { stopSession() } else { cancelScanning(sender) }
+    @IBAction func didTapRightBarButton(_ sender: UIBarButtonItem) {
+        if isScanning {
+            stopSession()
+            // export
+        } else {
+            startSession()
+        }
     }
 
-    @IBAction func cancelScanning(_ sender: UIBarButtonItem) {
-        navigationController?.dismiss(animated: true)
-    }
-
-    // Export the USDZ output by specifying the `.parametric` export option.
-    // Alternatively, `.mesh` exports a nonparametric file and `.all`
-    // exports both in a single USDZ.
-    @IBAction func exportResults(_ sender: UIButton) {
-        let destinationURL = FileManager.default.temporaryDirectory.appending(path: "Room.usdz")
-        do {
-            try finalResults?.export(to: destinationURL, exportOptions: .parametric)
-            let activityVC = UIActivityViewController(activityItems: [destinationURL], applicationActivities: nil)
-            activityVC.modalPresentationStyle = .popover
-            present(activityVC, animated: true, completion: nil)
-            if let popOver = activityVC.popoverPresentationController {
-                popOver.sourceView = self.exportButton
-            }
-        } catch {
-            print("Error = \(error)")
+    @IBAction func didTapCancelButton(_ sender: UIBarButtonItem) {
+        if isScanning {
+            stopSession()
         }
     }
 
@@ -76,32 +60,25 @@ private extension ViewController {
     private func startSession() {
         isScanning = true
         roomCaptureView?.captureSession.run(configuration: roomCaptureSessionConfig)
-        setActiveNavBar()
+        styleForRecordingMode()
     }
 
     private func stopSession() {
         isScanning = false
         roomCaptureView?.captureSession.stop()
-        setCompleteNavBar()
+        styleForDefaultMode()
     }
 
-    func setActiveNavBar() {
-        UIView.animate(withDuration: 1.0, animations: {
-            self.cancelButton?.tintColor = .white
-            self.doneButton?.tintColor = .white
-            self.exportButton?.alpha = 0.0
-        }, completion: { complete in
-            self.exportButton?.isHidden = true
-        })
+    func styleForDefaultMode() {
+        cancelButton.isHidden = true
+        rightBarButton.isHidden = false
+        rightBarButton.title = "Start"
     }
 
-    func setCompleteNavBar() {
-        exportButton?.isHidden = false
-        UIView.animate(withDuration: 1.0) {
-            self.cancelButton?.tintColor = .systemBlue
-            self.doneButton?.tintColor = .systemBlue
-            self.exportButton?.alpha = 1.0
-        }
+    func styleForRecordingMode() {
+        cancelButton.isHidden = false
+        rightBarButton.isHidden = false
+        rightBarButton.title = "Done"
     }
 }
 

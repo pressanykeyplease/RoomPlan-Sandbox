@@ -15,51 +15,28 @@
                     <view key="view" contentMode="scaleToFill" id="Btq-Zp-Bcb">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="c1i-3V-7mW">
-                                <rect key="frame" x="120" y="711" width="150" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="XYx-Xb-aKM"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="dp0-9u-agT"/>
-                                </constraints>
-                                <color key="tintColor" systemColor="systemBlueColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Export" cornerStyle="capsule">
-                                    <backgroundConfiguration key="background"/>
-                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="exportResults:" destination="llw-wt-BW8" eventType="touchUpInside" id="byE-Fi-flI"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Pb5-mg-BeT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="c1i-3V-7mW" firstAttribute="bottom" secondItem="Pb5-mg-BeT" secondAttribute="bottom" id="RiL-Yj-UKw"/>
-                            <constraint firstItem="c1i-3V-7mW" firstAttribute="centerX" secondItem="Btq-Zp-Bcb" secondAttribute="centerX" id="bOW-SF-hsf"/>
-                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Iez-de-SoY">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="5Hu-67-agB">
                             <color key="tintColor" systemColor="linkColor"/>
                             <connections>
-                                <action selector="cancelScanning:" destination="llw-wt-BW8" id="4sR-Wb-Z2C"/>
+                                <action selector="didTapCancelButton:" destination="llw-wt-BW8" id="b5g-L7-weR"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Done" id="V2S-hJ-ex1">
                             <color key="tintColor" systemColor="linkColor"/>
                             <connections>
-                                <action selector="doneScanning:" destination="llw-wt-BW8" id="hGX-EL-DQi"/>
+                                <action selector="didTapRightBarButton:" destination="llw-wt-BW8" id="TW5-vE-eNT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cancelButton" destination="5Hu-67-agB" id="jLF-sh-ki6"/>
-                        <outlet property="doneButton" destination="V2S-hJ-ex1" id="vmg-Oh-IMc"/>
-                        <outlet property="exportButton" destination="c1i-3V-7mW" id="O9i-7g-nMI"/>
+                        <outlet property="rightBarButton" destination="V2S-hJ-ex1" id="AEK-Pw-BMr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oFS-7J-NBL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -91,9 +68,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
