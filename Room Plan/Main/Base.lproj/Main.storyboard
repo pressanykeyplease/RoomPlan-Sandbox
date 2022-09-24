@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21223" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21223" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9HP-t6-jBa">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21204"/>
@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="DDB-fG-EqS">
             <objects>
-                <viewController storyboardIdentifier="RoomCaptureViewController" id="llw-wt-BW8" customClass="ViewController" customModule="Room_Plan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" id="llw-wt-BW8" customClass="ViewController" customModule="Room_Plan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Btq-Zp-Bcb">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,11 +43,13 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Iez-de-SoY">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="5Hu-67-agB">
+                            <color key="tintColor" systemColor="linkColor"/>
                             <connections>
                                 <action selector="cancelScanning:" destination="llw-wt-BW8" id="4sR-Wb-Z2C"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Done" id="V2S-hJ-ex1">
+                            <color key="tintColor" systemColor="linkColor"/>
                             <connections>
                                 <action selector="doneScanning:" destination="llw-wt-BW8" id="hGX-EL-DQi"/>
                             </connections>
@@ -84,6 +86,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
