@@ -70,10 +70,16 @@ private extension ViewController {
     }
 
     func showPlanViewer() {
-        let storyboard = UIStoryboard(name: "PlanViewerViewController", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "PlanViewerViewController") as! PlanViewerViewController
-        navigationController?.pushViewController(vc, animated: true)
-        vc.configure(with: finalResults)
+        let url = FileManager.default.temporaryDirectory.appending(path: "Room.usdz")
+        do {
+            try finalResults?.export(to: url, exportOptions: .parametric)
+            let storyboard = UIStoryboard(name: "PlanViewerViewController", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "PlanViewerViewController") as! PlanViewerViewController
+            navigationController?.pushViewController(vc, animated: true)
+            vc.configure(with: url)
+        } catch {
+            alert(title: "Error", message: error.localizedDescription)
+        }
     }
 
     func styleForDefaultMode() {
