@@ -11,9 +11,7 @@ import UIKit
 // MARK: - PlanViewerViewController
 class PlanViewerViewController: UIViewController {
     func configure(with url: URL) {
-
-        
-        let url = Bundle.main.url(forResource: "room_1", withExtension: "usdz")!
+        let url = Bundle.main.url(forResource: "room_1", withExtension: "usdz")! // delete that
         guard let scene = try? SCNScene(url: url) else {
             fatalError("Can't make scene")
         }
@@ -23,7 +21,7 @@ class PlanViewerViewController: UIViewController {
 
         let x = wall?.transform.m41
         let y = wall?.transform.m42
-        let z = wall?.transform.m43
         let width = wall?.boundingBox.max.x
+        let angle = wall?.eulerAngles.y
     }
 }
