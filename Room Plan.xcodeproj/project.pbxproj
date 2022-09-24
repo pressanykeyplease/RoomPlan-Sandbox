@@ -13,6 +13,9 @@
 		23A65DE628DE4F06002D58B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A65DE428DE4F06002D58B0 /* Main.storyboard */; };
 		23A65DE828DE4F07002D58B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A65DE728DE4F07002D58B0 /* Assets.xcassets */; };
 		23A65DEB28DE4F07002D58B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A65DE928DE4F07002D58B0 /* LaunchScreen.storyboard */; };
+		23A65DF728DEDDCD002D58B0 /* PlanViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A65DF628DEDDCD002D58B0 /* PlanViewerViewController.swift */; };
+		23A65DF928DEDDDC002D58B0 /* PlanViewerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A65DF828DEDDDC002D58B0 /* PlanViewerViewController.storyboard */; };
+		23A65DFD28DEDE6A002D58B0 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A65DFC28DEDE6A002D58B0 /* UIViewController+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		23A65DE728DE4F07002D58B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23A65DEA28DE4F07002D58B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23A65DEC28DE4F07002D58B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23A65DF628DEDDCD002D58B0 /* PlanViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewerViewController.swift; sourceTree = "<group>"; };
+		23A65DF828DEDDDC002D58B0 /* PlanViewerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlanViewerViewController.storyboard; sourceTree = "<group>"; };
+		23A65DFC28DEDE6A002D58B0 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +62,10 @@
 		23A65DDD28DE4F06002D58B0 /* Room Plan */ = {
 			isa = PBXGroup;
 			children = (
+				23A65DFA28DEDE4A002D58B0 /* Core */,
 				23A65DF228DE4F1C002D58B0 /* Application */,
 				23A65DF428DE4FCD002D58B0 /* Main */,
+				23A65DF528DEDDB9002D58B0 /* PlanViewer */,
 				23A65DF328DE4F27002D58B0 /* Resources */,
 			);
 			path = "Room Plan";
@@ -89,6 +97,31 @@
 				23A65DE428DE4F06002D58B0 /* Main.storyboard */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		23A65DF528DEDDB9002D58B0 /* PlanViewer */ = {
+			isa = PBXGroup;
+			children = (
+				23A65DF628DEDDCD002D58B0 /* PlanViewerViewController.swift */,
+				23A65DF828DEDDDC002D58B0 /* PlanViewerViewController.storyboard */,
+			);
+			path = PlanViewer;
+			sourceTree = "<group>";
+		};
+		23A65DFA28DEDE4A002D58B0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				23A65DFB28DEDE4F002D58B0 /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		23A65DFB28DEDE4F002D58B0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				23A65DFC28DEDE6A002D58B0 /* UIViewController+Alert.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +184,7 @@
 			files = (
 				23A65DEB28DE4F07002D58B0 /* LaunchScreen.storyboard in Resources */,
 				23A65DE828DE4F07002D58B0 /* Assets.xcassets in Resources */,
+				23A65DF928DEDDDC002D58B0 /* PlanViewerViewController.storyboard in Resources */,
 				23A65DE628DE4F06002D58B0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,7 +196,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23A65DFD28DEDE6A002D58B0 /* UIViewController+Alert.swift in Sources */,
 				23A65DE328DE4F06002D58B0 /* ViewController.swift in Sources */,
+				23A65DF728DEDDCD002D58B0 /* PlanViewerViewController.swift in Sources */,
 				23A65DDF28DE4F06002D58B0 /* AppDelegate.swift in Sources */,
 				23A65DE128DE4F06002D58B0 /* SceneDelegate.swift in Sources */,
 			);

@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     @IBAction func didTapRightBarButton(_ sender: UIBarButtonItem) {
         if isScanning {
             stopSession()
-            // export
+            showPlanViewer()
         } else {
             startSession()
         }
@@ -67,6 +67,13 @@ private extension ViewController {
         isScanning = false
         roomCaptureView?.captureSession.stop()
         styleForDefaultMode()
+    }
+
+    func showPlanViewer() {
+        let storyboard = UIStoryboard(name: "PlanViewerViewController", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PlanViewerViewController") as! PlanViewerViewController
+        vc.configure(with: finalResults)
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     func styleForDefaultMode() {
