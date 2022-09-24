@@ -72,8 +72,8 @@ private extension ViewController {
     func showPlanViewer() {
         let storyboard = UIStoryboard(name: "PlanViewerViewController", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "PlanViewerViewController") as! PlanViewerViewController
-        vc.configure(with: finalResults)
         navigationController?.pushViewController(vc, animated: true)
+        vc.configure(with: finalResults)
     }
 
     func styleForDefaultMode() {

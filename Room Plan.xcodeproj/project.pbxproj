@@ -16,6 +16,10 @@
 		23A65DF728DEDDCD002D58B0 /* PlanViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A65DF628DEDDCD002D58B0 /* PlanViewerViewController.swift */; };
 		23A65DF928DEDDDC002D58B0 /* PlanViewerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A65DF828DEDDDC002D58B0 /* PlanViewerViewController.storyboard */; };
 		23A65DFD28DEDE6A002D58B0 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A65DFC28DEDE6A002D58B0 /* UIViewController+Alert.swift */; };
+		23A65E0328DEF1E9002D58B0 /* room_1.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 23A65DFF28DEF1E9002D58B0 /* room_1.usdz */; };
+		23A65E0428DEF1E9002D58B0 /* room_2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 23A65E0028DEF1E9002D58B0 /* room_2.usdz */; };
+		23A65E0528DEF1E9002D58B0 /* room_4.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 23A65E0128DEF1E9002D58B0 /* room_4.usdz */; };
+		23A65E0628DEF1E9002D58B0 /* room_3.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 23A65E0228DEF1E9002D58B0 /* room_3.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		23A65DF628DEDDCD002D58B0 /* PlanViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewerViewController.swift; sourceTree = "<group>"; };
 		23A65DF828DEDDDC002D58B0 /* PlanViewerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlanViewerViewController.storyboard; sourceTree = "<group>"; };
 		23A65DFC28DEDE6A002D58B0 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		23A65DFF28DEF1E9002D58B0 /* room_1.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room_1.usdz; sourceTree = "<group>"; };
+		23A65E0028DEF1E9002D58B0 /* room_2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room_2.usdz; sourceTree = "<group>"; };
+		23A65E0128DEF1E9002D58B0 /* room_4.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room_4.usdz; sourceTree = "<group>"; };
+		23A65E0228DEF1E9002D58B0 /* room_3.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room_3.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,7 @@
 		23A65DF328DE4F27002D58B0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				23A65DFE28DEF1CD002D58B0 /* Scans */,
 				23A65DE728DE4F07002D58B0 /* Assets.xcassets */,
 				23A65DE928DE4F07002D58B0 /* LaunchScreen.storyboard */,
 				23A65DEC28DE4F07002D58B0 /* Info.plist */,
@@ -122,6 +131,17 @@
 				23A65DFC28DEDE6A002D58B0 /* UIViewController+Alert.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		23A65DFE28DEF1CD002D58B0 /* Scans */ = {
+			isa = PBXGroup;
+			children = (
+				23A65DFF28DEF1E9002D58B0 /* room_1.usdz */,
+				23A65E0028DEF1E9002D58B0 /* room_2.usdz */,
+				23A65E0228DEF1E9002D58B0 /* room_3.usdz */,
+				23A65E0128DEF1E9002D58B0 /* room_4.usdz */,
+			);
+			path = Scans;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,9 +202,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23A65E0528DEF1E9002D58B0 /* room_4.usdz in Resources */,
 				23A65DEB28DE4F07002D58B0 /* LaunchScreen.storyboard in Resources */,
+				23A65E0328DEF1E9002D58B0 /* room_1.usdz in Resources */,
 				23A65DE828DE4F07002D58B0 /* Assets.xcassets in Resources */,
+				23A65E0428DEF1E9002D58B0 /* room_2.usdz in Resources */,
 				23A65DF928DEDDDC002D58B0 /* PlanViewerViewController.storyboard in Resources */,
+				23A65E0628DEF1E9002D58B0 /* room_3.usdz in Resources */,
 				23A65DE628DE4F06002D58B0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
