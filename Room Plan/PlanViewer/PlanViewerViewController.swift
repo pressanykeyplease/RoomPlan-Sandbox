@@ -15,24 +15,22 @@ class PlanViewerViewController: UIViewController {
         guard let scene = try? SCNScene(url: url) else {
             fatalError("Can't make scene")
         }
-        let walls = scene.rootNode.childNodes { node, _ in
+        var walls = scene.rootNode.childNodes { node, _ in
             node.name!.hasPrefix("Wall") && !node.name!.hasSuffix("_grp")
         }
         walls.forEach {
-            let angle = $0.eulerAngles.y
             let wallView = UIView(frame: makeFrame(for: $0))
             wallView.backgroundColor = .red
-            wallView.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
+            let positionX = $0.worldPosition.x * 10 + 100
+            let positionY = $0.worldPosition.z * 10 + 100
+            wallView.center = CGPoint(x: Int(positionX), y: Int(positionY))
+            // wallView.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
             view.addSubview(wallView)
         }
     }
 
     func makeFrame(for node: SCNNode) -> CGRect {
-        let positionX = node.worldPosition.x * 10
-        let positionY = node.worldPosition.z * 10
         let width = node.boundingBox.max.x * 10
-        let depth = 1
-        print(node.name!, width, depth)
-        return CGRect(x: Int(positionX) + 100, y: Int(positionY) + 100, width: Int(width), height: depth)
+        return CGRect(x: 0, y: 0, width: Int(width), height: 1)
     }
 }
