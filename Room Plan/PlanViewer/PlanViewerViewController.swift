@@ -19,20 +19,20 @@ class PlanViewerViewController: UIViewController {
             node.name!.hasPrefix("Wall") && !node.name!.hasSuffix("_grp")
         }
         walls.forEach {
-            let positionX = $0.transform.m41 * 10
-            let positionY = $0.transform.m43 * 10
-            let width = $0.boundingBox.max.x * 10
-            let depth = $0.boundingBox.max.y * 10
             let angle = $0.eulerAngles.y
-            let wallView = UIView(frame: CGRect(x: Int(positionX) + 100, y: Int(positionY) + 100, width: Int(width), height: Int(depth)))
+            let wallView = UIView(frame: makeFrame(for: $0))
             wallView.backgroundColor = .red
             wallView.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
             view.addSubview(wallView)
-            
-            
-            
-            
-            print($0.name!, positionX, positionY, width, depth, angle)
         }
+    }
+
+    func makeFrame(for node: SCNNode) -> CGRect {
+        let positionX = node.worldPosition.x * 10
+        let positionY = node.worldPosition.z * 10
+        let width = node.boundingBox.max.x * 10
+        let depth = 1
+        print(node.name!, width, depth)
+        return CGRect(x: Int(positionX) + 100, y: Int(positionY) + 100, width: Int(width), height: depth)
     }
 }
