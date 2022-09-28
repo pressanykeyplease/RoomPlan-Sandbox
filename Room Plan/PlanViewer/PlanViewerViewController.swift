@@ -40,29 +40,9 @@ class PlanViewerViewController: UIViewController {
     }
 
     func getRotationAngle(groupAngle: Float, node: SCNNode, rootNode: SCNNode) -> CGFloat {
-        let (min, max) = node.boundingBox
-
-        let a = SCNVector3(max.x, min.x, 0)
-        let b = SCNVector3(max.x, node.worldPosition.x, 0)
-//        let topLeft = SCNVector3(min.x, max.y, 0)
-//
-//        let worldBottomLeft = node.convertPosition(bottomLeft, to: rootNode)
-//        let worldTopRight = node.convertPosition(topRight, to: rootNode)
-//        let worldTopLeft = node.convertPosition(topLeft, to: rootNode)
-//
-//        let a = SCNVector3(x: worldBottomLeft.x - worldTopRight.x,
-//                            y: worldBottomLeft.y - worldTopRight.y,
-//                            z: worldBottomLeft.z - worldTopRight.z)
-//
-//        let b = SCNVector3(x: worldBottomLeft.x - worldTopLeft.x,
-//                            y: worldBottomLeft.y - worldTopLeft.y,
-//                            z: worldBottomLeft.z - worldTopLeft.z)
-//        print(min)
-        let vector = SCNVector3(a.y * b.z - a.z * b.y,
-                                -1 * (a.x * b.z - a.z * b.x),
-                                a.x * b.y - a.y * b.x)
-
-        return CGFloat(vector.y)
+        let nodeAngle = node.eulerAngles.y
+        
+        return CGFloat(-1 * groupAngle - nodeAngle)
     }
 }
 
