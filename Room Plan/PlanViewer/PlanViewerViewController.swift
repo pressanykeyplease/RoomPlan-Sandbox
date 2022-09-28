@@ -20,7 +20,7 @@ class PlanViewerViewController: UIViewController {
         }.first else {
             fatalError("Walls_grp not found")
         }
-        let wallsGroupAngle = wallsGroup.eulerAngles.y
+        let wallsGroupAngles = wallsGroup.eulerAngles
         var walls = scene.rootNode.childNodes { node, _ in
             node.name!.hasPrefix("Wall") && !node.name!.hasSuffix("_grp")
         }
@@ -32,17 +32,17 @@ class PlanViewerViewController: UIViewController {
             let positionX = $0.worldPosition.x * 15 + 120
             let positionY = $0.worldPosition.z * 15 + 120
             wallView.center = CGPoint(x: Int(positionX), y: Int(positionY))
-            wallView.transform = CGAffineTransform(rotationAngle: getRotationAngle(groupAngle: wallsGroupAngle, node: $0, rootNode: scene.rootNode))
+            wallView.transform = CGAffineTransform(rotationAngle: getRotationAngle(groupAngle: wallsGroupAngles, node: $0, rootNode: scene.rootNode))
             
             
             view.addSubview(wallView)
         }
     }
 
-    func getRotationAngle(groupAngle: Float, node: SCNNode, rootNode: SCNNode) -> CGFloat {
+    func getRotationAngle(groupAngle: SCNVector3, node: SCNNode, rootNode: SCNNode) -> CGFloat {
         let nodeAngle = node.eulerAngles.y
-        
-        return CGFloat(-1 * groupAngle - nodeAngle)
+        print(node.eulerAngles.x, node.eulerAngles.z)
+        return CGFloat(-1 * groupAngle.y - nodeAngle)
     }
 }
 
