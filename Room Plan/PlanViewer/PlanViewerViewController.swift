@@ -12,7 +12,7 @@ import UIKit
 class PlanViewerViewController: UIViewController {
     // MARK: - Public
     func configure(with url: URL) {
-        let url = Bundle.main.url(forResource: "room_1", withExtension: "usdz")! // delete that
+        // let url = Bundle.main.url(forResource: "room_3", withExtension: "usdz")! - example
         guard let scene = try? SCNScene(url: url) else {
             fatalError("Can't make scene")
         }
@@ -30,7 +30,7 @@ class PlanViewerViewController: UIViewController {
     }
 
     // MARK: - Private constants
-    private let scaleFactor: Float = 40
+    private let scaleFactor: Float = 30
     private let viewOffset: Float = 200
     private let wallDepth = 12
 }
@@ -49,9 +49,17 @@ private extension PlanViewerViewController {
     }
 
     func getRotationAngle(groupAngle: SCNVector3, nodeAngles: SCNVector3) -> CGFloat {
-        var extraAngle: Float {
-            nodeAngles.z == 0 ? 0 : .pi / 2
+        if nodeAngles.z == 0 {
+            return CGFloat(-1 * groupAngle.y - nodeAngles.y)
+        } else {
+            var extraAngle: Float {
+                if groupAngle.y == -0 {
+                    return 0
+                } else {
+                    return .pi / 2
+                }
+            }
+            return CGFloat(groupAngle.y + nodeAngles.y + extraAngle)
         }
-        return CGFloat(-1 * groupAngle.y - nodeAngles.y + extraAngle)
     }
 }
