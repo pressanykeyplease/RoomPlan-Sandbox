@@ -15,13 +15,13 @@ class PlanViewerViewController: UIViewController {
         guard let scene = try? SCNScene(url: url) else {
             fatalError("Can't make scene")
         }
-        guard let wallsGroup = scene.rootNode.childNodes { node, _ in
+        guard let wallsGroup = scene.rootNode.childNodes(passingTest: { node, _ in
             node.name!.hasPrefix("Walls_grp")
-        }.first else {
+        }).first else {
             fatalError("Walls_grp not found")
         }
         let wallsGroupAngles = wallsGroup.eulerAngles
-        var walls = scene.rootNode.childNodes { node, _ in
+        let walls = scene.rootNode.childNodes { node, _ in
             node.name!.hasPrefix("Wall") && !node.name!.hasSuffix("_grp")
         }
         walls.forEach {
