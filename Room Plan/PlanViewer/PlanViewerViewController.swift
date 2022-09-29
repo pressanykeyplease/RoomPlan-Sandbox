@@ -30,15 +30,16 @@ class PlanViewerViewController: UIViewController {
     }
 
     // MARK: - Private constants
-    private let scaleFactor: Float = 15
-    private let viewOffset: Float = 120
+    private let scaleFactor: Float = 40
+    private let viewOffset: Float = 200
+    private let wallDepth = 12
 }
 
 // MARK: - Private methods
 private extension PlanViewerViewController {
     func placeWall(with node: SCNNode, wallsGroup: SCNNode) {
         let width = (node.boundingBox.max.x - node.boundingBox.min.x) * scaleFactor
-        let wallView = UIView(frame: CGRect(x: .zero, y: .zero, width: Int(width), height: 3))
+        let wallView = UIView(frame: CGRect(x: .zero, y: .zero, width: Int(width), height: wallDepth))
         wallView.backgroundColor = .black
         let positionX = node.worldPosition.x * scaleFactor + viewOffset
         let positionY = node.worldPosition.z * scaleFactor + viewOffset
