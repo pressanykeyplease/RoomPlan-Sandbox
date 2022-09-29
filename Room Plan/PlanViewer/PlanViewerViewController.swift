@@ -12,7 +12,7 @@ import UIKit
 class PlanViewerViewController: UIViewController {
     // MARK: - Public
     func configure(with url: URL) {
-        // let url = Bundle.main.url(forResource: "room_3", withExtension: "usdz")! - example
+        // let url = Bundle.main.url(forResource: "room_3", withExtension: "usdz")!//  - example
         guard let scene = try? SCNScene(url: url) else {
             fatalError("Can't make scene")
         }

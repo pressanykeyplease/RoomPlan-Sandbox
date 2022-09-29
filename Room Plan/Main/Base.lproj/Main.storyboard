@@ -15,8 +15,18 @@
                     <view key="view" contentMode="scaleToFill" id="Btq-Zp-Bcb">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="1gI-FL-VBJ">
+                                <rect key="frame" x="185" y="412" width="20" height="20"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Pb5-mg-BeT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1gI-FL-VBJ" firstAttribute="centerX" secondItem="Pb5-mg-BeT" secondAttribute="centerX" id="9MB-aJ-KRA"/>
+                            <constraint firstItem="1gI-FL-VBJ" firstAttribute="centerY" secondItem="Pb5-mg-BeT" secondAttribute="centerY" id="J3A-EM-E6T"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Iez-de-SoY">
@@ -35,6 +45,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="1gI-FL-VBJ" id="UDO-ec-ITa"/>
                         <outlet property="cancelButton" destination="5Hu-67-agB" id="jLF-sh-ki6"/>
                         <outlet property="rightBarButton" destination="V2S-hJ-ex1" id="AEK-Pw-BMr"/>
                     </connections>

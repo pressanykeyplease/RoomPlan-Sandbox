@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     // MARK: - IBOutlets
+    @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private var rightBarButton: UIBarButtonItem!
     @IBOutlet private var cancelButton: UIBarButtonItem!
 
@@ -29,7 +30,13 @@ class ViewController: UIViewController {
     @IBAction func didTapRightBarButton(_ sender: UIBarButtonItem) {
         if isScanning {
             stopSession()
-            showPlanViewer()
+            activityIndicator.isHidden = false
+            navigationController?.view.isUserInteractionEnabled = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                self.showPlanViewer()
+                self.activityIndicator.isHidden = true
+                self.navigationController?.view.isUserInteractionEnabled = true
+            }
         } else {
             startSession()
         }
