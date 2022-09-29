@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		239F6FC128E55E7200259A6C /* Int+toRadians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F6FC028E55E7200259A6C /* Int+toRadians.swift */; };
+		239F6FC328E55E9B00259A6C /* Float+toDegrees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F6FC228E55E9B00259A6C /* Float+toDegrees.swift */; };
 		23A65DDF28DE4F06002D58B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A65DDE28DE4F06002D58B0 /* AppDelegate.swift */; };
 		23A65DE128DE4F06002D58B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A65DE028DE4F06002D58B0 /* SceneDelegate.swift */; };
 		23A65DE328DE4F06002D58B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A65DE228DE4F06002D58B0 /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		239F6FC028E55E7200259A6C /* Int+toRadians.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+toRadians.swift"; sourceTree = "<group>"; };
+		239F6FC228E55E9B00259A6C /* Float+toDegrees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+toDegrees.swift"; sourceTree = "<group>"; };
 		23A65DDB28DE4F06002D58B0 /* Room Plan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Room Plan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A65DDE28DE4F06002D58B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23A65DE028DE4F06002D58B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,7 +132,9 @@
 		23A65DFB28DEDE4F002D58B0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				239F6FC028E55E7200259A6C /* Int+toRadians.swift */,
 				23A65DFC28DEDE6A002D58B0 /* UIViewController+Alert.swift */,
+				239F6FC228E55E9B00259A6C /* Float+toDegrees.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -221,8 +227,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				23A65DFD28DEDE6A002D58B0 /* UIViewController+Alert.swift in Sources */,
+				239F6FC328E55E9B00259A6C /* Float+toDegrees.swift in Sources */,
 				23A65DE328DE4F06002D58B0 /* ViewController.swift in Sources */,
 				23A65DF728DEDDCD002D58B0 /* PlanViewerViewController.swift in Sources */,
+				239F6FC128E55E7200259A6C /* Int+toRadians.swift in Sources */,
 				23A65DDF28DE4F06002D58B0 /* AppDelegate.swift in Sources */,
 				23A65DE128DE4F06002D58B0 /* SceneDelegate.swift in Sources */,
 			);

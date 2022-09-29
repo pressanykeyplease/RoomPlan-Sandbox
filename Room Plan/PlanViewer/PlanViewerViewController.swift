@@ -45,15 +45,3 @@ class PlanViewerViewController: UIViewController {
         return CGFloat(-1 * groupAngle.y - nodeAngles.y + extraAngle)
     }
 }
-
-extension Int {
-    func toRadians() -> CGFloat {
-        CGFloat(self) * CGFloat.pi / 180
-    }
-}
-
-extension Float {
-    func toDegrees() -> Int {
-        Int(CGFloat(self) * 180 / CGFloat.pi)
-    }
-}
