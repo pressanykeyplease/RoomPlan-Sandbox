@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23222E2728ED6C5100FC1E46 /* example.png in Resources */ = {isa = PBXBuildFile; fileRef = 23222E2628ED6C5100FC1E46 /* example.png */; };
 		239F6FC128E55E7200259A6C /* Int+toRadians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F6FC028E55E7200259A6C /* Int+toRadians.swift */; };
 		239F6FC328E55E9B00259A6C /* Float+toDegrees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F6FC228E55E9B00259A6C /* Float+toDegrees.swift */; };
 		23A65DDF28DE4F06002D58B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A65DDE28DE4F06002D58B0 /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23222E2628ED6C5100FC1E46 /* example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = example.png; sourceTree = "<group>"; };
 		239F6FC028E55E7200259A6C /* Int+toRadians.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+toRadians.swift"; sourceTree = "<group>"; };
 		239F6FC228E55E9B00259A6C /* Float+toDegrees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+toDegrees.swift"; sourceTree = "<group>"; };
 		23A65DDB28DE4F06002D58B0 /* Room Plan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Room Plan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +97,7 @@
 		23A65DF328DE4F27002D58B0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				23222E2628ED6C5100FC1E46 /* example.png */,
 				23A65DFE28DEF1CD002D58B0 /* Scans */,
 				23A65DE728DE4F07002D58B0 /* Assets.xcassets */,
 				23A65DE928DE4F07002D58B0 /* LaunchScreen.storyboard */,
@@ -208,6 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23222E2728ED6C5100FC1E46 /* example.png in Resources */,
 				23A65E0528DEF1E9002D58B0 /* room_4.usdz in Resources */,
 				23A65DEB28DE4F07002D58B0 /* LaunchScreen.storyboard in Resources */,
 				23A65E0328DEF1E9002D58B0 /* room_1.usdz in Resources */,
