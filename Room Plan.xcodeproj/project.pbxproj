@@ -23,6 +23,7 @@
 		23A65E0428DEF1E9002D58B0 /* room_2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 23A65E0028DEF1E9002D58B0 /* room_2.usdz */; };
 		23A65E0528DEF1E9002D58B0 /* room_4.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 23A65E0128DEF1E9002D58B0 /* room_4.usdz */; };
 		23A65E0628DEF1E9002D58B0 /* room_3.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 23A65E0228DEF1E9002D58B0 /* room_3.usdz */; };
+		23B6B4C329260E920076DE49 /* example3D.png in Resources */ = {isa = PBXBuildFile; fileRef = 23B6B4C229260E920076DE49 /* example3D.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		23A65E0028DEF1E9002D58B0 /* room_2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room_2.usdz; sourceTree = "<group>"; };
 		23A65E0128DEF1E9002D58B0 /* room_4.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room_4.usdz; sourceTree = "<group>"; };
 		23A65E0228DEF1E9002D58B0 /* room_3.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room_3.usdz; sourceTree = "<group>"; };
+		23B6B4C229260E920076DE49 /* example3D.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = example3D.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		23A65DF328DE4F27002D58B0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				23B6B4C229260E920076DE49 /* example3D.png */,
 				23222E2628ED6C5100FC1E46 /* example.png */,
 				23A65DFE28DEF1CD002D58B0 /* Scans */,
 				23A65DE728DE4F07002D58B0 /* Assets.xcassets */,
@@ -216,6 +219,7 @@
 				23A65DEB28DE4F07002D58B0 /* LaunchScreen.storyboard in Resources */,
 				23A65E0328DEF1E9002D58B0 /* room_1.usdz in Resources */,
 				23A65DE828DE4F07002D58B0 /* Assets.xcassets in Resources */,
+				23B6B4C329260E920076DE49 /* example3D.png in Resources */,
 				23A65E0428DEF1E9002D58B0 /* room_2.usdz in Resources */,
 				23A65DF928DEDDDC002D58B0 /* PlanViewerViewController.storyboard in Resources */,
 				23A65E0628DEF1E9002D58B0 /* room_3.usdz in Resources */,
