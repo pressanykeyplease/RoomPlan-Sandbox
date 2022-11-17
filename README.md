@@ -4,4 +4,4 @@
 
 This sandbox project is made for practicing in RoomPlan SDK by Apple. Demo app allows you to draw all the walls in the room after it was skanned with LiDAR sensor.
 
-<img src="https://github.com/pressanykeyplease/RoomPlan-Sandbox/blob/main/Room%20Plan/Resources/example.png" width="300" height="649"/>
+<img src="https://github.com/pressanykeyplease/RoomPlan-Sandbox/blob/main/Room%20Plan/Resources/example3D.png" width="300" height="649"/>  <img src="https://github.com/pressanykeyplease/RoomPlan-Sandbox/blob/main/Room%20Plan/Resources/example.png" width="300" height="649"/>
